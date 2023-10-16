@@ -1,7 +1,9 @@
 import React from "react";
-
-function Header () {
-    return <h1>Hello from the Header</h1>
+import SearchBar from "./SearchBar";
+function Header ({setSearchStr}) {
+    return (
+    <SearchBar setSearchStr={setSearchStr}/>
+    )
 }
 
 export default Header;

@@ -6,6 +6,23 @@ import React,{useState,useEffect} from 'react';
 
 function App() {
   const [pizzaObj,setPizza] = useState([])
+  const[searchStr,setSearchStr] = useState('')
+
+
+
+  function onNewPlanteer(arr){
+ 
+    const newArr =  arr.filter((el)=>{
+      const strToLower = searchStr.toLowerCase()
+      const nameToLower = el.name.toLowerCase()
+      const ingredientToLower = el.ingredient.map((el)=>{
+        return el.toLowerCase()})
+      return nameToLower.includes(strToLower)||ingredientToLower.toString().includes(strToLower)
+    })
+    return newArr
+    
+    }
+
   useEffect(() => {
     fetch("http://localhost:3001/pizzas")
       .then((r) => r.json())
@@ -13,13 +30,16 @@ function App() {
         setPizza(pizzasArr)
       });
   }, []);
+
+
+
   return (
 
 
     <>
-        <Header />
+        <Header setSearchStr={setSearchStr}/>
         <PizzaForm />
-        <PizzaContainer pizzaObj={pizzaObj}/>
+        <PizzaContainer pizzaObj={pizzaObj} onNewPlanteer={onNewPlanteer}/>
     </>
   );
 }
