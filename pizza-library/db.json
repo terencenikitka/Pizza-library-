@@ -1,0 +1,54 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "name": "Contadina",
+      "img": "https://live.staticflickr.com/8161/7672522142_17a7a6942a_b.jpg",
+      "ingredient": [
+        "Tomato sauce",
+        "Mozzarella",
+        "Eggplants",
+        "Artichokes",
+        "Garlic",
+        "Basil"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Con cozze",
+      "img": "https://media-assets.lacucinaitaliana.it/photos/61fd2a2a5455c3ec4f002f26/1:1/pass/undefined",
+      "ingredient": [
+        "Mussels",
+        "Garlic",
+        "Olive oil",
+        "Parsley"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Diavola",
+      "img": "https://www.pizzarecipe.org/wp-content/uploads/2019/01/Pizza-Diavola.jpg",
+      "ingredient": [
+        "Tomato sauce",
+        "Mozzarella",
+        "Hot Italian salami",
+        "Hot chili peppers"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Etna",
+      "img": "https://www.eatcookexplore.com/wp-content/uploads/2016/10/06-Pizza-Express-011.jpg",
+      "ingredient": [
+        "Tomato sauce",
+        "Mozzarella",
+        "Anchovies",
+        "Capers",
+        "Olives"
+      ]
+    },
+    {
+      "id": 5
+    }
+  ]
+}

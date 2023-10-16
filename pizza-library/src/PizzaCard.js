@@ -2,7 +2,7 @@ import React from "react";
 
 function PizzaCard ({el}) {
     const{name,img,ingredient}=el
-    console.log(img)
+    // console.log(img)
     const renderedIngredient = ingredient.map((el)=><li>{el}</li>)
     return (
         <li className="cards__item">
