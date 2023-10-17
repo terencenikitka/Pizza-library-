@@ -33,13 +33,21 @@ function App() {
 
 
 
+  function handleNewPizza(onePizza){
+    setPizza([onePizza, ...pizzaObj])
+  }
+
   return (
 
 
     <>
+
         <Header setSearchStr={setSearchStr}/>
-        <PizzaForm />
         <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/>
+
+        <PizzaForm handleNewPizza={handleNewPizza}/>
+        <PizzaContainer pizzaObj={pizzaObj}/>
+
     </>
   );
 }
