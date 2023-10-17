@@ -48,6 +48,14 @@
       ]
     },
     {
+      "name": "Margherita",
+      "img": "https://www.abeautifulplate.com/wp-content/uploads/2015/08/the-best-homemade-margherita-pizza-1-4-500x500.jpg",
+      "ingredient": [
+        "Tomato sauce",
+        "mozzarella",
+        "basil leaves",
+        ""
+      ],
       "id": 5
     }
   ]

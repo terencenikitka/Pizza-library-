@@ -13,12 +13,16 @@ function App() {
         setPizza(pizzasArr)
       });
   }, []);
+
+  function handleNewPizza(onePizza){
+    setPizza([onePizza, ...pizzaObj])
+  }
   return (
 
 
     <>
         <Header />
-        <PizzaForm />
+        <PizzaForm handleNewPizza={handleNewPizza}/>
         <PizzaContainer pizzaObj={pizzaObj}/>
     </>
   );
