@@ -4,25 +4,13 @@ import { NavLink } from "react-router-dom";
 
 function Header ({setSearchStr}) {
     return (
-        <>
-            <SearchBar setSearchStr={setSearchStr}/>
-    <nav>
-    <NavLink
-        to="/"
-        className="nav-link"
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="/newPizza"
-        className="nav-link"
-      >
-        New Pizza
-      </NavLink>
-    </nav>
-        
-        </>
-
+    <>
+        <SearchBar setSearchStr={setSearchStr}/>
+        <nav>
+            <NavLink to="/" className="nav-link">Home</NavLink>
+            <NavLink to="/newPizza" className="nav-link">New Pizza</NavLink>
+        </nav>
+    </>
     )
 }
 
