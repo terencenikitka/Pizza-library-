@@ -8,8 +8,6 @@ function App() {
   const [pizzaObj,setPizza] = useState([])
   const[searchStr,setSearchStr] = useState('')
 
-
-
   function onNewPizza(arr){
  
     const newArr =  arr.filter((el)=>{
@@ -31,23 +29,15 @@ function App() {
       });
   }, []);
 
-
-
   function handleNewPizza(onePizza){
     setPizza([onePizza, ...pizzaObj])
   }
 
   return (
-
-
     <>
-
         <Header setSearchStr={setSearchStr}/>
         <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/>
-
         <PizzaForm handleNewPizza={handleNewPizza}/>
-    
-
     </>
   );
 }
