@@ -46,7 +46,7 @@ function App() {
         <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/>
 
         <PizzaForm handleNewPizza={handleNewPizza}/>
-        <PizzaContainer pizzaObj={pizzaObj}/>
+    
 
     </>
   );
