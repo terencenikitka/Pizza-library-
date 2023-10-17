@@ -1,8 +1,8 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-function Header ({setSearchStr}) {
+function Header ({setSearchStr,handleSort}) {
     return (
-    <SearchBar setSearchStr={setSearchStr}/>
+    <SearchBar setSearchStr={setSearchStr} handleSort={handleSort}/>
     )
 }
 
