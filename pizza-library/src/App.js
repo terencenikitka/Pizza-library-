@@ -7,6 +7,7 @@ import React,{useState,useEffect} from 'react';
 function App() {
   const [pizzaObj,setPizza] = useState([])
   const[searchStr,setSearchStr] = useState('')
+  const [sort,setSort] = useState(false)
 
   function onNewPizza(arr){
  
@@ -17,8 +18,13 @@ function App() {
         return el.toLowerCase()})
       return nameToLower.includes(strToLower)||ingredientToLower.toString().includes(strToLower)
     })
-    return newArr
-    
+    if (!sort){
+      return newArr}
+else {
+ return newArr.sort((a,b)=>{ 
+  if (b.name>a.name){return -1 }
+else if(a.name>b.name){return 1}
+else return 0})}
     }
 
   useEffect(() => {
@@ -29,13 +35,22 @@ function App() {
       });
   }, []);
 
+
+  function handleSort(){
+    setSort((curent)=>!curent)
+  }
+
+
   function handleNewPizza(onePizza){
     setPizza([onePizza, ...pizzaObj])
   }
 
   return (
     <>
-        <Header setSearchStr={setSearchStr}/>
+
+
+        <Header setSearchStr={setSearchStr} handleSort={handleSort}/>
+
         <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/>
         <PizzaForm handleNewPizza={handleNewPizza}/>
     </>
