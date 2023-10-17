@@ -10,7 +10,7 @@ function App() {
 
 
 
-  function onNewPlanteer(arr){
+  function onNewPizza(arr){
  
     const newArr =  arr.filter((el)=>{
       const strToLower = searchStr.toLowerCase()
@@ -39,7 +39,7 @@ function App() {
     <>
         <Header setSearchStr={setSearchStr}/>
         <PizzaForm />
-        <PizzaContainer pizzaObj={pizzaObj} onNewPlanteer={onNewPlanteer}/>
+        <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/>
     </>
   );
 }
