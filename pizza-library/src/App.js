@@ -9,8 +9,6 @@ function App() {
   const[searchStr,setSearchStr] = useState('')
   const [sort,setSort] = useState(false)
 
-
-
   function onNewPizza(arr){
  
     const newArr =  arr.filter((el)=>{
@@ -37,25 +35,24 @@ else return 0})}
       });
   }, []);
 
+
   function handleSort(){
     setSort((curent)=>!curent)
   }
+
 
   function handleNewPizza(onePizza){
     setPizza([onePizza, ...pizzaObj])
   }
 
   return (
-
-
     <>
 
+
         <Header setSearchStr={setSearchStr} handleSort={handleSort}/>
+
         <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/>
-
         <PizzaForm handleNewPizza={handleNewPizza}/>
-    
-
     </>
   );
 }
