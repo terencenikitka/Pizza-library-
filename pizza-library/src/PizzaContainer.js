@@ -1,7 +1,7 @@
 import React from "react";
 import PizzaCard from "./PizzaCard";
 
-function PizzaContainer ({pizzaObj,onNewPlanteer}) {
+function PizzaContainer ({pizzaObj,onNewPizza}) {
   
 const renderedPizza = onNewPizza(pizzaObj).map((el)=>{return (<PizzaCard key={el.id} el={el} />)})
     return (
