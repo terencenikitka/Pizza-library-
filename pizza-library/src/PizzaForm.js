@@ -6,6 +6,7 @@ function PizzaForm () {
     const [name, setName] = useState("")
     const [img, setImg] = useState("")
     const [ingredient, setIngredient] = useState("")
+    
 
     const {handleNewPizza} = useOutletContext()
 
@@ -26,7 +27,9 @@ function PizzaForm () {
         const onePizza = {
             name: name,
             img: img,
+            fav:false,
             ingredient: ingredient
+            
             
             .split(',')
             .map(str => str.trim())

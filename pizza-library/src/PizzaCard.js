@@ -12,6 +12,7 @@ function PizzaCard ({el}) {
     }
     function handleFav(){
       setFav((cur)=>!cur)
+      
     }
     
     return (
