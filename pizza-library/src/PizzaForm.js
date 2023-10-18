@@ -1,9 +1,13 @@
 import React, {useState} from "react";
+import { useOutletContext } from "react-router-dom";
 
-function PizzaForm ({handleNewPizza}) {
+function PizzaForm () { 
+    
     const [name, setName] = useState("")
     const [img, setImg] = useState("")
     const [ingredient, setIngredient] = useState("")
+
+    const {handleNewPizza} = useOutletContext()
 
     function handleNameChange(event){
         setName(event.target.value)
@@ -16,7 +20,7 @@ function PizzaForm ({handleNewPizza}) {
     function handleIngredientChange(event){
         setIngredient(event.target.value)
     }
-
+  
     function handleOnSubmit(event){
         event.preventDefault();
         const onePizza = {

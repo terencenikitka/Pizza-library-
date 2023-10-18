@@ -46,12 +46,19 @@ else return 0})}
     setPizza([onePizza, ...pizzaObj])
   }
 
-  const context = {
+
+   const context = {   
+
     pizzaObj:pizzaObj,
     onNewPizza:onNewPizza,
-    pizzaObj:pizzaObj
-    
+    handleNewPizza,
+    setSearchStr,
+    handleSort,
   }
+
+ 
+
+
   return (
     <>
 
@@ -59,8 +66,9 @@ else return 0})}
         <Header setSearchStr={setSearchStr} handleSort={handleSort}/>
 
         {/* <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/> */}
-        <PizzaForm handleNewPizza={handleNewPizza}/>
+        {/* <PizzaForm handleNewPizza={handleNewPizza}/> */}
         <Outlet context={context}/>
+      
     </>
   );
 }
