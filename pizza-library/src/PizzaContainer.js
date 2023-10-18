@@ -1,12 +1,12 @@
 import React from "react";
 import PizzaCard from "./PizzaCard";
-
-function PizzaContainer ({pizzaObj,onNewPizza}) {
-
+import { useOutletContext } from "react-router-dom";
+function PizzaContainer () {
+const {pizzaObj,onNewPizza} = useOutletContext()
 const renderedPizza = onNewPizza(pizzaObj).map((el)=>{return (<PizzaCard  key={el.id} el={el} />)})
     return (
         <ul className="cards">
-            <p>Hello from the Pizza Container</p>
+        
             {renderedPizza}
         </ul>
     )

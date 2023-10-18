@@ -3,6 +3,7 @@ import Header from './Header';
 import PizzaContainer from './PizzaContainer';
 import PizzaForm from './PizzaForm';
 import React,{useState,useEffect} from 'react';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [pizzaObj,setPizza] = useState([])
@@ -45,14 +46,21 @@ else return 0})}
     setPizza([onePizza, ...pizzaObj])
   }
 
+  const context = {
+    pizzaObj:pizzaObj,
+    onNewPizza:onNewPizza,
+    pizzaObj:pizzaObj
+    
+  }
   return (
     <>
 
 
         <Header setSearchStr={setSearchStr} handleSort={handleSort}/>
 
-        <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/>
+        {/* <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/> */}
         <PizzaForm handleNewPizza={handleNewPizza}/>
+        <Outlet context={context}/>
     </>
   );
 }
