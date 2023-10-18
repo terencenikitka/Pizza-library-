@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState}from "react";
 
 function PizzaCard ({el}) {
-    const{name,img,ingredient}=el
+    const{name,img,ingredient,id}=el
     const renderedIngredient =  ingredient.map((el)=><li>{el}</li>)
+
+    const [details,setDetails] = useState(false)
+
+    function handleClick(){
+      setDetails((cur)=>!cur)
+    }
+    
     return (
         <li className="cards__item">
             <div className="card">
@@ -11,10 +18,11 @@ function PizzaCard ({el}) {
           src={img}
           alt={name}
           className="card__image"
+          onClick={handleClick}
         />
     <div>
       <h4 className="ingredientsname">Ingredients:</h4>
-      <ul className="ingredientslist">{renderedIngredient}</ul>
+      <ul className="ingredientslist">{ details?renderedIngredient:''}</ul>
     </div>
  </div>
  </li>   )
