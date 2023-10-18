@@ -50,13 +50,18 @@ function PizzaForm ({handleNewPizza}) {
 
     return(
         <>
-            <form onSubmit={handleOnSubmit}>
-                <h2>Add a new pizza</h2> 
+        <div className="pizzaform">
+        <form onSubmit={handleOnSubmit}>
+                <h2 className="formname">Add a new pizza</h2> 
                     <input type="text" name="name" placeholder="e.g Hawaiian" value={name} onChange={handleNameChange}></input>
                     <input type="url" name="img" placeholder="Enter a URL" onChange={handleImgChange} value={img}></input>
                     <input type="text" name="indgredients" placeholder="List ingredients separated by a comma" onChange={handleIngredientChange} value={ingredient}></input>
                     <button type="submit" name="submit">Submit</button>
             </form>
+        </div>
+        <div className="backtohome">
+            <button>Back To Home</button>
+        </div>
         </>
     )
 

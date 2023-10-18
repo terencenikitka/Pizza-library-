@@ -5,10 +5,9 @@ function PizzaContainer () {
 const {pizzaObj,onNewPizza} = useOutletContext()
 const renderedPizza = onNewPizza(pizzaObj).map((el)=>{return (<PizzaCard  key={el.id} el={el} />)})
     return (
-        <ul className="cards">
-        
-            {renderedPizza}
-        </ul>
+        <div className="pizzacontainer">
+            <ul className="cards">{renderedPizza}</ul>
+        </div>
     )
 }
 

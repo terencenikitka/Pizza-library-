@@ -13,15 +13,17 @@ function PizzaCard ({el}) {
     return (
         <li className="cards__item">
             <div className="card">
+            <h4 className="pizzaname">{name}</h4>
             <img
           src={img}
           alt={name}
           className="card__image"
           onClick={handleClick}
         />
-    <h4>{name}</h4>
-    <div><ul>{ details?renderedIngredient:''}</ul></div>
-   
+    <div>
+      <h4 className="ingredientsname">Ingredients:</h4>
+      <ul className="ingredientslist">{ details?renderedIngredient:''}</ul>
+    </div>
  </div>
  </li>   )
 }
