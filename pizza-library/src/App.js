@@ -59,7 +59,7 @@ else return 0})}
         <Header setSearchStr={setSearchStr} handleSort={handleSort}/>
 
         {/* <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/> */}
-        <PizzaForm handleNewPizza={handleNewPizza}/>
+        {/* <PizzaForm handleNewPizza={handleNewPizza}/> */}
         <Outlet context={context}/>
     </>
   );

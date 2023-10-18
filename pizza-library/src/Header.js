@@ -1,6 +1,5 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-
 import { NavLink } from "react-router-dom";
 import {IoPizzaOutline} from "react-icons/io5";
 
