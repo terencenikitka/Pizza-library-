@@ -11,9 +11,9 @@ const routes = [
     element: <App />,
     children: [
       {
-        path:"/pizzaContainer",
-        element:<PizzaContainer />,
-      },
+    path:"/pizzaContainer",
+    element:<PizzaContainer />,
+  },
     ]
   },
   {
