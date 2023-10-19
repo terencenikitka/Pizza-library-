@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import { NavLink } from "react-router-dom";
+
 
 function PizzaForm ({handleNewPizza}) {
     const [name, setName] = useState("")
@@ -38,9 +40,9 @@ function PizzaForm ({handleNewPizza}) {
         }
         )
         .then(response => response.json())
-        .then(handleNewPizza(onePizza))
+        // .then(handleNewPizza(onePizza))
         .then((data) => {
-            handleNewPizza(data)
+            // handleNewPizza(data)
             setName("")
             setImg("")
             setIngredient("")
@@ -60,7 +62,9 @@ function PizzaForm ({handleNewPizza}) {
             </form>
         </div>
         <div className="backtohome">
-            <button>Back To Home</button>
+        <nav className="nav">
+                <NavLink to="/" className="nav-link">Back to Home</NavLink>
+            </nav>
         </div>
         </>
     )
