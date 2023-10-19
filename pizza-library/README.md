@@ -38,3 +38,6 @@ You can always return home by clicking **Home**
 
 Enjoy Pizza Library!
 
+## Resources:
+[Whimsical Board](https://whimsical.com/pizza-app-4zRZxiE2diWiwP5xMfnPcG)
+
