@@ -9,6 +9,8 @@ function App() {
   const [pizzaObj,setPizza] = useState([])
   const[searchStr,setSearchStr] = useState('')
   const [sort,setSort] = useState(false)
+ 
+
 
   function onNewPizza(arr){
  
@@ -36,6 +38,7 @@ else return 0})}
       });
   }, []);
 
+ 
 
   function handleSort(){
     setSort((curent)=>!curent)

@@ -7,6 +7,7 @@ import PizzaForm from './PizzaForm';
 import PizzaContainer from './PizzaContainer';
 import SearchBar from './SearchBar';
 import WelcomePage from './WelcomePage';
+import FavPizza from './FavPizza';
 const routes = [
   {
     path: "/",
@@ -16,6 +17,10 @@ const routes = [
       {
     path:"/pizzaContainer",
     element:[<SearchBar/>,<PizzaContainer />]
+  },
+  {
+    path:"/favPizza",
+    element:[<SearchBar/>,<FavPizza />]
   },
   {
     path: "/newpizza",
