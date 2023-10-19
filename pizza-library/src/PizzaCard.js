@@ -52,14 +52,14 @@ function handleDelete(){
         <h1>
         <div>
         
-     <button onClick={handleFav}>{fav?"remove 🟊":'add to favorite☆'}</button>
+     <button id="like button" onClick={handleFav}>{fav?"remove 🟊":'add to favorite☆'}</button>
     
      </div>
     </h1>
     <h1>
         <div>
         
-     <button onClick={handleDelete}>Delete</button>
+     <button id="delete button" onClick={handleDelete}>Delete</button>
     
      </div>
     </h1>
