@@ -22,16 +22,13 @@ Pizza Library is built in React and uses a db.json file to render data from a se
 3. Run `npm start` - this will open the React app locally on port 3000.
 4. If done correctly, you should see a page like the below.
 
-
+    [Pizza Library](https://imgur.com/MaD6Pel)
 
 5. If you are not seeing the pizza and magnifying glass icon, try installing `npm install react-icons --save`
-
-**INSERT SCREENSHOT**
 
 # Navigating Pizza Library
 There are a number of easy-to-navigate routes within Pizza Library. 
 
-To start, click on **Pizzas** to load in the pre-populated pizzas from the server.
 To add a new pizza, click on **New Pizza** and add in your own pizza image, name and ingredients to the list.
 You can always return home by clicking **Home**
 
