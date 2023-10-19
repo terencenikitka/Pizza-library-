@@ -1,5 +1,7 @@
 import React, {useState} from "react";
-import { useOutletContext } from "react-router-dom";
+
+import { useOutletContext, NavLink} from "react-router-dom";
+
 
 function PizzaForm () { 
     
@@ -45,9 +47,9 @@ function PizzaForm () {
         }
         )
         .then(response => response.json())
-        .then(handleNewPizza(onePizza))
+        // .then(handleNewPizza(onePizza))
         .then((data) => {
-            handleNewPizza(data)
+            // handleNewPizza(data)
             setName("")
             setImg("")
             setIngredient("")
@@ -67,7 +69,9 @@ function PizzaForm () {
             </form>
         </div>
         <div className="backtohome">
-            <button>Back To Home</button>
+        <nav className="nav">
+                <NavLink to="/" className="nav-link">Back to Home</NavLink>
+            </nav>
         </div>
         </>
     )
