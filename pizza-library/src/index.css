@@ -119,12 +119,15 @@ img {
 .ingredientsname {
   color: white;
   font-size: 150%;
+  text-align: center;
 }
 
 .ingredientslist {
   font-size: 120%;
   list-style: none;
   text-align: left;
+  color: white;
+  padding: 5%;
 }
 
 .formname {
