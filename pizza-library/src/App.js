@@ -9,6 +9,8 @@ function App() {
   const [pizzaObj,setPizza] = useState([])
   const[searchStr,setSearchStr] = useState('')
   const [sort,setSort] = useState(false)
+ 
+
 
   function onNewPizza(arr){
  
@@ -36,6 +38,7 @@ else return 0})}
       });
   }, []);
 
+ 
 
   function handleSort(){
     setSort((curent)=>!curent)
@@ -46,12 +49,19 @@ else return 0})}
     setPizza([onePizza, ...pizzaObj])
   }
 
-  const context = {
+
+   const context = {   
+
     pizzaObj:pizzaObj,
     onNewPizza:onNewPizza,
-    pizzaObj:pizzaObj
-    
+    handleNewPizza,
+    setSearchStr,
+    handleSort,
   }
+
+ 
+
+
   return (
     <>
 
@@ -61,6 +71,7 @@ else return 0})}
         {/* <PizzaContainer pizzaObj={pizzaObj} onNewPizza={onNewPizza}/> */}
         {/* <PizzaForm handleNewPizza={handleNewPizza}/> */}
         <Outlet context={context}/>
+      
     </>
   );
 }

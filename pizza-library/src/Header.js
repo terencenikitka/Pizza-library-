@@ -13,8 +13,9 @@ function Header ({setSearchStr,handleSort}) {
                 <NavLink to="/" className="nav-link">Home</NavLink>
                 <NavLink to="/newPizza" className="nav-link">New Pizza</NavLink>
                 <NavLink to="/pizzaContainer" className="nav-link">Pizzas</NavLink>
+                <NavLink to="/favPizza" className="nav-link">Favorite</NavLink>
             </nav>
-            <SearchBar setSearchStr={setSearchStr} handleSort={handleSort}/>        
+            {/* <SearchBar setSearchStr={setSearchStr} handleSort={handleSort}/>         */}
       </>
     )
 }

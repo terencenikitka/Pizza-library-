@@ -1,7 +1,12 @@
 import React from "react";
 import {AiOutlineSearch} from "react-icons/ai";
+import { useOutletContext } from "react-router-dom";
 
-function SearchBar({setSearchStr,handleSort}) {
+
+function SearchBar() {
+
+  const {setSearchStr,handleSort} = useOutletContext()
+
     function handleSearch(e){
         setSearchStr(e.target.value)
       }
