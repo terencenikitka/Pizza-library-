@@ -106,9 +106,11 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  /* border-top-left-radius: 0.25rem; */
+  /* border-top-right-radius: 0.25rem; */
   filter: contrast(70%);
+  height: 250px;
+  width: 300px;
   overflow: hidden;
   position: relative;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
