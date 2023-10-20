@@ -47,9 +47,12 @@ function PizzaForm () {
         }
         )
         .then(response => response.json())
-        // .then(handleNewPizza(onePizza))
+        // .then(handleNewPizza(onePizza) )
+        //    setName("")
+        //     setImg("")
+        //     setIngredient("")
         .then((data) => {
-            // handleNewPizza(data)
+            handleNewPizza(data)
             setName("")
             setImg("")
             setIngredient("")
