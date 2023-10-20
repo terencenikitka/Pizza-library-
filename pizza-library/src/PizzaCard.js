@@ -1,6 +1,6 @@
 import React, {useState}from "react";
 
-function PizzaCard ({el,handleFav}) {
+function PizzaCard ({el,handleFav,onupdatedPizza}) {
     const{name,img,ingredient,id,fav}=el
     
     const renderedIngredient =  ingredient.map((el)=><li>{el}</li>)
@@ -24,6 +24,7 @@ function PizzaCard ({el,handleFav}) {
           },
           body: JSON.stringify({fav:!fav})
       }).then((r)=>r.json())
+      .then((updatedPizza) => onupdatedPizza(updatedPizza))
       return 
     }
 function handleDelete(){
