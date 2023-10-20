@@ -48,7 +48,16 @@ else return 0})}
   function handleNewPizza(onePizza){
     setPizza([onePizza, ...pizzaObj])
   }
-
+function onupdatedPizza(updatedPizza){
+  setPizza((currentPizza) => {
+    return currentPizza.map((pizza) => {
+      if (pizza.id === updatedPizza.id) {
+        return updatedPizza;
+      } else {
+        return pizza;
+      }
+    });
+  });}
 
    const context = {   
 
@@ -57,6 +66,7 @@ else return 0})}
     handleNewPizza,
     setSearchStr,
     handleSort,
+    onupdatedPizza
   }
 
  
